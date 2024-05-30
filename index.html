@@ -71,7 +71,7 @@
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">Halo nama saya <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Yoga Aditya Nugraha</span></h1>
             <h2 class="mb-2 text-lg font-medium text-secondary lg:text-2xl">Informatika || <span class="text-dark dark:text-white">Universitas Nasional</span></h2>
-            <p class="mb-2 font-medium leading-relaxed text-secondary">Saya adalah seorang mahasiswa semester 7 yang mempunyai minat dan bermimpi untuk berkarir di bidang Backend Web Developer</p>
+            <p class="mb-2 font-medium leading-relaxed text-secondary">Saya adalah seorang mahasiswa semester 8 yang mempunyai minat dan bermimpi untuk berkarir di bidang Backend Web Developer</p>
 
             <h1><span class="mb-10 text-dark dark:text-white">PENGALAMAN :</span></h1>
             <li class="mt-2 mb-2 font-medium leading-relaxed text-secondary">Magang Merdeka Website Developer & Administrator | Maritim Muda Nusantara</li>
@@ -99,7 +99,7 @@
             <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Project Pribadi</h2>
             <p class="text-md font-medium text-secondary md:text-lg">
-              Portofolio dari Project yang pernah saya kerjakan mulai dari tugas Kuliah hingga tugas dari Bootcamp 
+              Portofolio dari Project yang pernah saya kerjakan mulai dari tugas Kuliah, magang, hingga tugas dari Bootcamp 
             </p>
           </div>
         </div>
@@ -123,8 +123,8 @@
             <div class="overflow-hidden rounded-md shadow-md">
               <img src="dist/img/portfolio/ss 3.png" alt="Technical Documentation" width="w-full" />
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Tugas Akhir Virtual Internship Investree</h3>
-            <p class="text-base font-medium text-secondary">Project Akhir Virtual Internship Investree Membuat Restfull API dengan Laravel <a href="https://github.com/yoga-nditya/-task-5-fullstack-"><b>Klik Disini</b></a></p>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Project magang maritim muda nusantara</h3>
+            <p class="text-base font-medium text-secondary">Membuat Website hub.maritimmuda.id Versi Terbaru Dengan Laravel <a href="https://github.com/maritimmuda-id/hub.maritimmuda.id/tree/yoga-v3"><b>Klik Disini</b></a></p>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
@@ -139,7 +139,7 @@
     <!-- Portfolio Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+    <section id="contact" class="pt-30 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -160,14 +160,26 @@
             </div>
             <div class="mb-8 w-full px-4">
               <label for="message" class="text-base font-bold text-primary">Pesan</label>
-              <textarea type="email" id="email" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+              <textarea id="message" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
             </div>
             <div class="w-full px-4">
-              <button class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Kirim</button>
+              <button type="button" onclick="sendEmail()" class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Kirim</button>
             </div>
           </div>
         </form>
-      </div>
+        
+        <script>
+          function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+        
+            const mailtoLink = `mailto:?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+        
+            window.location.href = mailtoLink;
+          }
+        </script>
+        
     </section>
     <!-- Contact Section End -->
 
